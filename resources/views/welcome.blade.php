@@ -24,7 +24,7 @@
     <!--- Example Libs -->
     <link rel="stylesheet" type="text/css" href="dist/components/popup.css">
     <!-- Data table CSS -->
-    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
@@ -41,7 +41,7 @@
 <script type="text/javascript" src="dist/components/dropdown.js"></script>
 <script type="text/javascript" src="dist/components/popper.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="dist/semantic.min.js"></script>
 </body>

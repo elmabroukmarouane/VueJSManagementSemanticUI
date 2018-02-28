@@ -47317,6 +47317,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -47418,10 +47426,10 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _c("div", { staticClass: "ui column three stackable grid" }, [
+      _c("div", { staticClass: "ui column two stackable grid" }, [
         _c("div", { staticClass: "one wide column" }),
         _vm._v(" "),
-        _c("div", { staticClass: "two wide column" }, [
+        _c("div", { staticClass: "left aligned fifteen wide column" }, [
           _c("div", { staticClass: "ui breadcrumb" }, [
             _c("a", { staticClass: "section" }, [_vm._v("Home")]),
             _vm._v(" "),
@@ -47433,9 +47441,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "active section" }, [_vm._v("T-Shirt")])
           ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "thirteen wide column" })
+        ])
       ]),
       _vm._v(" "),
       _c("br"),
@@ -47576,6 +47582,16 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "one wide column" })
+      ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "ui column two stackable grid" }, [
+        _c("div", { staticClass: "one wide column" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "left aligned fifteen wide column" }, [
+          _c("footer", [_c("p", [_vm._v("Copyright 2009 Your name")])])
+        ])
       ])
     ])
   }

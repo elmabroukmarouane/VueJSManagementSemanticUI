@@ -171,10 +171,10 @@
             </div>
         </div>
         <br>
-        <div class="ui column three stackable grid">
+        <div class="ui column two stackable grid">
             <div class="one wide column">
             </div>
-            <div class="two wide column">
+            <div class="left aligned fifteen wide column">
                 <div class="ui breadcrumb">
                     <a class="section">Home</a>
                     <i class="right angle icon divider"></i>
@@ -182,8 +182,6 @@
                     <i class="right angle icon divider"></i>
                     <div class="active section">T-Shirt</div>
                 </div>
-            </div>
-            <div class="thirteen wide column">
             </div>
         </div>
         <br>
@@ -255,6 +253,16 @@
                 </div>
             </div>
             <div class="one wide column">
+            </div>
+        </div>
+        <br>
+        <div class="ui column two stackable grid">
+            <div class="one wide column">
+            </div>
+            <div class="left aligned fifteen wide column">
+                <footer>
+                    <p>Copyright 2009 Your name</p>
+                </footer>
             </div>
         </div>
     </div>
