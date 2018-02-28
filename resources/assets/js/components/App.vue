@@ -158,7 +158,7 @@
                     <div class="divider"></div>
                     <div class="item">Separated Link</div>
                     <div class="divider"></div>
-                    <div class="item">One more separated link</div>
+                    <div class="item" @click="showModalLogout()">Logout</div>
                 </div>
             </div>
             <div class="right menu">
@@ -198,7 +198,7 @@
                                     <span class="text">Actions</span>&nbsp;&nbsp;
                                     <i class="dropdown icon"></i>
                                     <div class="menu">
-                                        <div class="item"><i class="add icon"></i> Add</div>
+                                        <div class="item" @click="showModalForm()"><i class="add icon"></i> Add</div>
                                         <div class="item"><i class="edit icon"></i> Edit</div>
                                         <div class="divider"></div>
                                         <div class="item"><i class="delete icon"></i> Remove</div>
@@ -704,6 +704,54 @@
                 </footer>
             </div>
         </div>
+        <!-- Begin Modal Form -->
+        <div class="ui fullscreen modal" id="form-modal">
+            <i class="close icon"></i>
+            <div class="header" style="background-color: #2196f3; color: white;">
+                Update Your Settings
+            </div>
+            <div class="content">
+                <div class="ui form">
+                    <div class="field">
+                        <label>Feedback</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" checked="checked" name="contact-me">
+                            <label>It's okay to contact me.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui red cancel button">Cancel</div>
+                <div class="ui green ok button">Send</div>
+            </div>
+        </div>
+        <!-- END Modal Form -->
+
+        <!-- Begin Modal Logout -->
+        <div class="ui basic modal" id="logout-modal">
+            <div class="ui icon header">
+                <i class="archive icon"></i>
+                Archive Old Messages
+            </div>
+            <div class="content">
+                <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+            </div>
+            <div class="actions">
+                <div class="ui red cancel inverted button">
+                    <i class="remove icon"></i>
+                    No
+                </div>
+                <div class="ui green ok inverted button">
+                    <i class="checkmark icon"></i>
+                    Yes
+                </div>
+            </div>
+        </div>
+        <!-- End Modal Logout -->
     </div>
 </template>
 
@@ -711,7 +759,7 @@
     export default {
         mounted() {
             this.initComponents();
-            this.getData()
+            this.getData();
         },
         methods:{
             initComponents() {
@@ -726,6 +774,14 @@
                 Vue.nextTick(function () {
                     Event.$emit('init-datatable', 'table_list');
                 });
+            },
+            showModalLogout()
+            {
+                $('#logout-modal').modal('show');
+            },
+            showModalForm()
+            {
+                $('#form-modal').modal('show');
             }
         }
     }
