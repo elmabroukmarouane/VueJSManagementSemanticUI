@@ -27,6 +27,19 @@
                         <i class="search icon"></i>
                     </div>
                 </div>
+                <div class="ui dropdown item">
+                    Dropdown
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item">Action</div>
+                        <div class="item">Another Action</div>
+                        <div class="item">Something else here</div>
+                        <div class="divider"></div>
+                        <div class="item">Separated Link</div>
+                        <div class="divider"></div>
+                        <div class="item" @click="showModalLogout()">Logout</div>
+                    </div>
+                </div>
             </div>
         </div>
         <br>

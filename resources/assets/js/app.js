@@ -16,8 +16,8 @@ window.Event = new Vue();
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-//Vue.component('app', require('./components/App.vue'));
-Vue.component('app', require('./components/auth/Login.vue'));
+Vue.component('app', require('./components/App.vue'));
+//Vue.component('app', require('./components/auth/Login.vue'));
 
 const app = new Vue({
     el: '#app',
