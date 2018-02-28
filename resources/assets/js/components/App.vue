@@ -143,11 +143,11 @@
         </div>-->
         <div class="ui blue inverted menu">
             <div class="header item">Brand</div>
+            <a class="item" @click="showVerticalMenu()">Veritcal Menu</a>
             <a class="active item" id="link-a" data-content="Add users to your feed">Link</a>
             <div class="ui custom popup top left transition hidden">
                 I'm not on the same level as the button, but i can still be found.
             </div>
-            <a class="item">Link</a>
             <div class="ui dropdown item">
                 Dropdown
                 <i class="dropdown icon"></i>
@@ -164,11 +164,26 @@
             <div class="right menu">
                 <div class="item">
                     <div class="ui icon input">
-                        <input type="text" placeholder="Rechercher">
+                        <input type="text" placeholder="Rechercher Pays..." id="search_box_ui">
                         <i class="search icon"></i>
                     </div>
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="ui left demo vertical inverted sidebar labeled icon menu">
+            <a class="item" href="javascript:void(0)">
+                <i class="home icon"></i>
+                Home
+            </a>
+            <a class="item" href="javascript:void(0)">
+                <i class="block layout icon"></i>
+                Topics
+            </a>
+            <a class="item" href="javascript:void(0)">
+                <i class="smile icon"></i>
+                Friends
+            </a>
         </div>
         <br>
         <div class="ui column two stackable grid">
@@ -191,26 +206,32 @@
             <div class="fourteen wide column">
                 <h4 class="ui top attached block header">List Items</h4>
                 <div class="ui bottom attached segment">
-                    <div class="ui column stackable grid">
-                        <div class="right aligned column">
-                            <div class="ui primary buttons">
-                                <div class="ui floating dropdown icon button" id="actions_dropdown">
-                                    <span class="text">Actions</span>&nbsp;&nbsp;
-                                    <i class="dropdown icon"></i>
-                                    <div class="menu">
-                                        <div class="item" @click="showModalForm()"><i class="add icon"></i> Add</div>
-                                        <div class="item"><i class="edit icon"></i> Edit</div>
-                                        <div class="divider"></div>
-                                        <div class="item"><i class="delete icon"></i> Remove</div>
+                    <div class="ui top attached tabular menu" id="tab_list_ui">
+                        <a class="item active" data-tab="tab-list">List Item</a>
+                        <a class="item" data-tab="second">Second</a>
+                        <a class="item" data-tab="third">Third</a>
+                    </div>
+                    <div class="ui bottom attached tab segment active" data-tab="tab-list">
+                        <div class="ui column stackable grid">
+                            <div class="right aligned column">
+                                <div class="ui primary buttons">
+                                    <div class="ui floating dropdown icon button" id="actions_dropdown">
+                                        <span class="text">Actions</span>&nbsp;&nbsp;
+                                        <i class="dropdown icon"></i>
+                                        <div class="menu">
+                                            <div class="item" @click="showModalForm()"><i class="add icon"></i> Add</div>
+                                            <div class="item"><i class="edit icon"></i> Edit</div>
+                                            <div class="divider"></div>
+                                            <div class="item"><i class="delete icon"></i> Remove</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <br>
-                    <table id="table_list" class="ui very basic center aligned table" style="border: solid 1px #EEEEEE">
-                        <thead>
+                        <br>
+                        <br>
+                        <table id="table_list" class="ui very basic center aligned table" style="border: solid 1px #EEEEEE">
+                            <thead>
                             <tr style="background-color: #2196f3;">
                                 <th style="color: white;">Name</th>
                                 <th style="color: white;">Position</th>
@@ -219,8 +240,8 @@
                                 <th style="color: white;">Start date</th>
                                 <th style="color: white;">Salary</th>
                             </tr>
-                        </thead>
-                        <tfoot>
+                            </thead>
+                            <tfoot>
                             <tr style="background-color: #2196f3;">
                                 <th style="color: white;">Name</th>
                                 <th style="color: white;">Position</th>
@@ -229,8 +250,8 @@
                                 <th style="color: white;">Start date</th>
                                 <th style="color: white;">Salary</th>
                             </tr>
-                        </tfoot>
-                        <tbody>
+                            </tfoot>
+                            <tbody>
                             <tr>
                                 <td>Tiger Nixon</td>
                                 <td>System Architect</td>
@@ -687,8 +708,15 @@
                                 <td>2011/01/25</td>
                                 <td>$112,000</td>
                             </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="second">
+                        Second
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="third">
+                        Third
+                    </div>
                 </div>
             </div>
             <div class="one wide column">
@@ -702,6 +730,7 @@
                 <footer>
                     <p>&copy; Copyright 2018. Marouane EL MABROUK.</p>
                 </footer>
+                <br>
             </div>
         </div>
         <!-- Begin Modal Form -->
@@ -710,24 +739,89 @@
             <div class="header" style="background-color: #2196f3; color: white;">
                 Update Your Settings
             </div>
+            <!-- <form class="ui form segment"> -->
             <div class="content">
+                <!-- <div class="ui error message"></div> -->
                 <div class="ui form">
-                    <div class="field">
-                        <label>Feedback</label>
-                        <textarea></textarea>
+                    <div class="required field">
+                        <label>First Name</label>
+                        <input name="first-name" placeholder="First Name" required type="text">
                     </div>
-                    <div class="field">
-                        <div class="ui checkbox">
-                            <input type="checkbox" checked="checked" name="contact-me">
+                    <div class="required field">
+                        <label>Last Name</label>
+                        <input name="last-name" placeholder="Last Name" type="text">
+                    </div>
+                    <div class="required field">
+                        <label>Feedback</label>
+                        <textarea name="feed-back" placeholder="Feed Back"></textarea>
+                    </div>
+                    <div class="required field">
+                        <div class="ui toggle checkbox">
+                            <input tabindex="0" class="hidden" type="checkbox" checked="checked" name="contact-me">
                             <label>It's okay to contact me.</label>
                         </div>
+                    </div>
+                    <div class="required inline fields">
+                        <label>Select your favorite fruit:</label>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input name="fruit" checked="" tabindex="0" class="hidden" type="radio">
+                                <label>Apples</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input name="fruit" tabindex="0" class="hidden" type="radio">
+                                <label>Oranges</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input name="fruit" tabindex="0" class="hidden" type="radio">
+                                <label>Pears</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input name="fruit" tabindex="0" class="hidden" type="radio">
+                                <label>Grapefruit</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="required field">
+                        <label>Gender</label>
+                        <div class="ui selection dropdown" id="select_dropdown">
+                            <input name="gender" type="hidden">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Gender</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">Male</div>
+                                <div class="item" data-value="0">Female</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="required field">
+                        <label>Country</label>
+                        <select multiple="" class="ui dropdown" id="select_dropdown_multiple">
+                            <option value="">Select Country</option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Åland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AS">American Samoa</option>
+                            <option value="AD">Andorra</option>
+                            <option value="AO">Angola</option>
+                            <option value="AI">Anguilla</option>
+                            <option value="AQ">Antarctica</option>
+                        </select>
                     </div>
                 </div>
             </div>
             <div class="actions">
                 <div class="ui red cancel button">Cancel</div>
-                <div class="ui green ok button">Send</div>
+                <div class="ui green submit button">Submit</div>
             </div>
+            <!-- </form> -->
         </div>
         <!-- END Modal Form -->
 
@@ -769,6 +863,48 @@
                     .popup({
                         popup : $('.custom.popup')
                     });
+                $('.ui.checkbox').checkbox();
+                $('.ui.radio.checkbox').checkbox();
+                $('#select_dropdown').dropdown();
+                $('#select_dropdown_multiple').dropdown();
+                $('.menu .item').tab();
+                /*$('.ui.form')
+                    .form({
+                        fields: {
+                            firstname: {
+                                identifier: 'first-name',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter your first name'
+                                    }
+                                ]
+                            },
+                            lastname: {
+                                identifier: 'last-name',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter your last name'
+                                    }
+                                ]
+                            },
+                            feedback: {
+                                identifier: 'feed-back',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter your feed back'
+                                    }
+                                ]
+                            }
+                        }
+                    });*/
+            },
+            showVerticalMenu()
+            {
+                $('.ui.labeled.icon.sidebar')
+                    .sidebar('toggle');
             },
             getData() {
                 Vue.nextTick(function () {

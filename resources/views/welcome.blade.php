@@ -21,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
     <link rel="stylesheet" type="text/css" href="dist/components/button.css">
     <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
+    <link rel="stylesheet" type="text/css" href="dist/components/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
     <!--- Example Libs -->
     <link rel="stylesheet" type="text/css" href="dist/components/popup.css">
     <!-- Data table CSS -->
@@ -40,6 +42,10 @@
 <script type="text/javascript" src="dist/components/transition.js"></script>
 <script type="text/javascript" src="dist/components/dropdown.js"></script>
 <script type="text/javascript" src="dist/components/popper.min.js"></script>
+<script type="text/javascript" src="dist/components/checkbox.min.js"></script>
+<script type="text/javascript" src="dist/components/form.min.js"></script>
+<script type="text/javascript" src="dist/components/sidebar.min.js"></script>
+<script type="text/javascript" src="dist/components/tab.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>

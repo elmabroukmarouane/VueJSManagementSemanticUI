@@ -3438,11 +3438,6 @@ Vue.component('app', __webpack_require__(39));
 
 var app = new Vue({
     el: '#app',
-    data: function data() {
-        return {
-            table: ''
-        };
-    },
     created: function created() {
         var _this = this;
 
@@ -47812,6 +47807,100 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -47826,6 +47915,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             $('#link-a').popup({
                 popup: $('.custom.popup')
             });
+            $('.ui.checkbox').checkbox();
+            $('.ui.radio.checkbox').checkbox();
+            $('#select_dropdown').dropdown();
+            $('#select_dropdown_multiple').dropdown();
+            $('.menu .item').tab();
+            /*$('.ui.form')
+                .form({
+                    fields: {
+                        firstname: {
+                            identifier: 'first-name',
+                            rules: [
+                                {
+                                    type   : 'empty',
+                                    prompt : 'Please enter your first name'
+                                }
+                            ]
+                        },
+                        lastname: {
+                            identifier: 'last-name',
+                            rules: [
+                                {
+                                    type   : 'empty',
+                                    prompt : 'Please enter your last name'
+                                }
+                            ]
+                        },
+                        feedback: {
+                            identifier: 'feed-back',
+                            rules: [
+                                {
+                                    type   : 'empty',
+                                    prompt : 'Please enter your feed back'
+                                }
+                            ]
+                        }
+                    }
+                });*/
+        },
+        showVerticalMenu: function showVerticalMenu() {
+            $('.ui.labeled.icon.sidebar').sidebar('toggle');
         },
         getData: function getData() {
             Vue.nextTick(function () {
@@ -47856,6 +47985,19 @@ var render = function() {
       _c(
         "a",
         {
+          staticClass: "item",
+          on: {
+            click: function($event) {
+              _vm.showVerticalMenu()
+            }
+          }
+        },
+        [_vm._v("Veritcal Menu")]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
           staticClass: "active item",
           attrs: { id: "link-a", "data-content": "Add users to your feed" }
         },
@@ -47867,8 +48009,6 @@ var render = function() {
           "\n            I'm not on the same level as the button, but i can still be found.\n        "
         )
       ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "item" }, [_vm._v("Link")]),
       _vm._v(" "),
       _c("div", { staticClass: "ui dropdown item" }, [
         _vm._v("\n            Dropdown\n            "),
@@ -47911,6 +48051,10 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
     _c("div", { staticClass: "ui column three stackable grid" }, [
       _c("div", { staticClass: "one wide column" }),
       _vm._v(" "),
@@ -47920,51 +48064,85 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "ui bottom attached segment" }, [
-          _c("div", { staticClass: "ui column stackable grid" }, [
-            _c("div", { staticClass: "right aligned column" }, [
-              _c("div", { staticClass: "ui primary buttons" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "ui floating dropdown icon button",
-                    attrs: { id: "actions_dropdown" }
-                  },
-                  [
-                    _c("span", { staticClass: "text" }, [_vm._v("Actions")]),
-                    _vm._v("  \n                                "),
-                    _c("i", { staticClass: "dropdown icon" }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "menu" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "item",
-                          on: {
-                            click: function($event) {
-                              _vm.showModalForm()
-                            }
-                          }
-                        },
-                        [_c("i", { staticClass: "add icon" }), _vm._v(" Add")]
-                      ),
-                      _vm._v(" "),
-                      _vm._m(2),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "divider" }),
-                      _vm._v(" "),
-                      _vm._m(3)
-                    ])
-                  ]
-                )
-              ])
-            ])
-          ]),
+          _vm._m(3),
           _vm._v(" "),
-          _c("br"),
+          _c(
+            "div",
+            {
+              staticClass: "ui bottom attached tab segment active",
+              attrs: { "data-tab": "tab-list" }
+            },
+            [
+              _c("div", { staticClass: "ui column stackable grid" }, [
+                _c("div", { staticClass: "right aligned column" }, [
+                  _c("div", { staticClass: "ui primary buttons" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "ui floating dropdown icon button",
+                        attrs: { id: "actions_dropdown" }
+                      },
+                      [
+                        _c("span", { staticClass: "text" }, [
+                          _vm._v("Actions")
+                        ]),
+                        _vm._v("  \n                                    "),
+                        _c("i", { staticClass: "dropdown icon" }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "item",
+                              on: {
+                                click: function($event) {
+                                  _vm.showModalForm()
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "add icon" }),
+                              _vm._v(" Add")
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm._m(4),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "divider" }),
+                          _vm._v(" "),
+                          _vm._m(5)
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _vm._m(6)
+            ]
+          ),
           _vm._v(" "),
-          _c("br"),
+          _c(
+            "div",
+            {
+              staticClass: "ui bottom attached tab segment",
+              attrs: { "data-tab": "second" }
+            },
+            [_vm._v("\n                    Second\n                ")]
+          ),
           _vm._v(" "),
-          _vm._m(4)
+          _c(
+            "div",
+            {
+              staticClass: "ui bottom attached tab segment",
+              attrs: { "data-tab": "third" }
+            },
+            [_vm._v("\n                    Third\n                ")]
+          )
         ])
       ]),
       _vm._v(" "),
@@ -47973,11 +48151,11 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
-    _vm._m(5),
+    _vm._m(7),
     _vm._v(" "),
-    _vm._m(6),
+    _vm._m(8),
     _vm._v(" "),
-    _vm._m(7)
+    _vm._m(9)
   ])
 }
 var staticRenderFns = [
@@ -47988,12 +48166,57 @@ var staticRenderFns = [
     return _c("div", { staticClass: "right menu" }, [
       _c("div", { staticClass: "item" }, [
         _c("div", { staticClass: "ui icon input" }, [
-          _c("input", { attrs: { type: "text", placeholder: "Rechercher" } }),
+          _c("input", {
+            attrs: {
+              type: "text",
+              placeholder: "Rechercher Pays...",
+              id: "search_box_ui"
+            }
+          }),
           _vm._v(" "),
           _c("i", { staticClass: "search icon" })
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "ui left demo vertical inverted sidebar labeled icon menu"
+      },
+      [
+        _c(
+          "a",
+          { staticClass: "item", attrs: { href: "javascript:void(0)" } },
+          [
+            _c("i", { staticClass: "home icon" }),
+            _vm._v("\n            Home\n        ")
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "item", attrs: { href: "javascript:void(0)" } },
+          [
+            _c("i", { staticClass: "block layout icon" }),
+            _vm._v("\n            Topics\n        ")
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "item", attrs: { href: "javascript:void(0)" } },
+          [
+            _c("i", { staticClass: "smile icon" }),
+            _vm._v("\n            Friends\n        ")
+          ]
+        )
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -48016,6 +48239,33 @@ var staticRenderFns = [
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "ui top attached tabular menu",
+        attrs: { id: "tab_list_ui" }
+      },
+      [
+        _c(
+          "a",
+          { staticClass: "item active", attrs: { "data-tab": "tab-list" } },
+          [_vm._v("List Item")]
+        ),
+        _vm._v(" "),
+        _c("a", { staticClass: "item", attrs: { "data-tab": "second" } }, [
+          _vm._v("Second")
+        ]),
+        _vm._v(" "),
+        _c("a", { staticClass: "item", attrs: { "data-tab": "third" } }, [
+          _vm._v("Third")
+        ])
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -48895,7 +49145,9 @@ var staticRenderFns = [
       _c("div", { staticClass: "left aligned fifteen wide column" }, [
         _c("footer", [
           _c("p", [_vm._v("© Copyright 2018. Marouane EL MABROUK.")])
-        ])
+        ]),
+        _vm._v(" "),
+        _c("br")
       ])
     ])
   },
@@ -48920,16 +49172,45 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "content" }, [
           _c("div", { staticClass: "ui form" }, [
-            _c("div", { staticClass: "field" }, [
-              _c("label", [_vm._v("Feedback")]),
+            _c("div", { staticClass: "required field" }, [
+              _c("label", [_vm._v("First Name")]),
               _vm._v(" "),
-              _c("textarea")
+              _c("input", {
+                attrs: {
+                  name: "first-name",
+                  placeholder: "First Name",
+                  required: "",
+                  type: "text"
+                }
+              })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "field" }, [
-              _c("div", { staticClass: "ui checkbox" }, [
+            _c("div", { staticClass: "required field" }, [
+              _c("label", [_vm._v("Last Name")]),
+              _vm._v(" "),
+              _c("input", {
+                attrs: {
+                  name: "last-name",
+                  placeholder: "Last Name",
+                  type: "text"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "required field" }, [
+              _c("label", [_vm._v("Feedback")]),
+              _vm._v(" "),
+              _c("textarea", {
+                attrs: { name: "feed-back", placeholder: "Feed Back" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "required field" }, [
+              _c("div", { staticClass: "ui toggle checkbox" }, [
                 _c("input", {
+                  staticClass: "hidden",
                   attrs: {
+                    tabindex: "0",
                     type: "checkbox",
                     checked: "checked",
                     name: "contact-me"
@@ -48938,6 +49219,139 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("label", [_vm._v("It's okay to contact me.")])
               ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "required inline fields" }, [
+              _c("label", [_vm._v("Select your favorite fruit:")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "field" }, [
+                _c("div", { staticClass: "ui radio checkbox" }, [
+                  _c("input", {
+                    staticClass: "hidden",
+                    attrs: {
+                      name: "fruit",
+                      checked: "",
+                      tabindex: "0",
+                      type: "radio"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("label", [_vm._v("Apples")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "field" }, [
+                _c("div", { staticClass: "ui radio checkbox" }, [
+                  _c("input", {
+                    staticClass: "hidden",
+                    attrs: { name: "fruit", tabindex: "0", type: "radio" }
+                  }),
+                  _vm._v(" "),
+                  _c("label", [_vm._v("Oranges")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "field" }, [
+                _c("div", { staticClass: "ui radio checkbox" }, [
+                  _c("input", {
+                    staticClass: "hidden",
+                    attrs: { name: "fruit", tabindex: "0", type: "radio" }
+                  }),
+                  _vm._v(" "),
+                  _c("label", [_vm._v("Pears")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "field" }, [
+                _c("div", { staticClass: "ui radio checkbox" }, [
+                  _c("input", {
+                    staticClass: "hidden",
+                    attrs: { name: "fruit", tabindex: "0", type: "radio" }
+                  }),
+                  _vm._v(" "),
+                  _c("label", [_vm._v("Grapefruit")])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "required field" }, [
+              _c("label", [_vm._v("Gender")]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "ui selection dropdown",
+                  attrs: { id: "select_dropdown" }
+                },
+                [
+                  _c("input", { attrs: { name: "gender", type: "hidden" } }),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "dropdown icon" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "default text" }, [
+                    _vm._v("Gender")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "menu" }, [
+                    _c(
+                      "div",
+                      { staticClass: "item", attrs: { "data-value": "1" } },
+                      [_vm._v("Male")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "item", attrs: { "data-value": "0" } },
+                      [_vm._v("Female")]
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "required field" }, [
+              _c("label", [_vm._v("Country")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass: "ui dropdown",
+                  attrs: { multiple: "", id: "select_dropdown_multiple" }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("Select Country")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "AF" } }, [
+                    _vm._v("Afghanistan")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "AX" } }, [
+                    _vm._v("Åland Islands")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "AL" } }, [_vm._v("Albania")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "DZ" } }, [_vm._v("Algeria")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "AS" } }, [
+                    _vm._v("American Samoa")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "AD" } }, [_vm._v("Andorra")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "AO" } }, [_vm._v("Angola")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "AI" } }, [
+                    _vm._v("Anguilla")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "AQ" } }, [
+                    _vm._v("Antarctica")
+                  ])
+                ]
+              )
             ])
           ])
         ]),
@@ -48947,7 +49361,9 @@ var staticRenderFns = [
             _vm._v("Cancel")
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "ui green ok button" }, [_vm._v("Send")])
+          _c("div", { staticClass: "ui green submit button" }, [
+            _vm._v("Submit")
+          ])
         ])
       ]
     )

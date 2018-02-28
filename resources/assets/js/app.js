@@ -20,11 +20,6 @@ Vue.component('app', require('./components/App.vue'));
 
 const app = new Vue({
     el: '#app',
-    data(){
-        return {
-            table: '',
-        }
-    },
     created()
     {
         Event.$on('init-datatable', (tableid) => {
